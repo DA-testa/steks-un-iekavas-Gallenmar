@@ -36,7 +36,8 @@ def find_mismatch(text):
     else:
         return opening_brackets_stack[len(opening_brackets_stack)-1].position
 #(((((((()) - it will return the position of the last unclosed braket
-
+#What: Use an input to choose files or input - F or I If input I, wait for another input to input the brackets.
+#test one should pass
 
 def main():
     text = input()
