@@ -1,5 +1,5 @@
 # python3
-
+# Nikita Plotnikovs 221RDB021
 from collections import namedtuple
 
 Bracket = namedtuple("Bracket", ["char", "position"])
@@ -38,15 +38,18 @@ def find_mismatch(text):
 #(((((((()) - it will return the position of the last unclosed braket
 #What: Use an input to choose files or input - F or I If input I, wait for another input to input the brackets.
 #test one should pass
+#code after for loop
 
 def main():
     text = input()
-    mismatch = find_mismatch(text)
-    if mismatch==0:
-        print("Success")
-        #print(mismatch)
-    else:
-        print(mismatch)
+    if 'I' in text:
+        text = input()
+        mismatch = find_mismatch(text)
+        if mismatch==0:
+            print("Success")
+            #print(mismatch)
+        else:
+            print(mismatch)
 
 if __name__ == "__main__":
     main()
